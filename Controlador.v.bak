@@ -1,11 +1,11 @@
-module Controlador(clk, IorD);
+module Controlador(clk, IorD, ULAsrcA, ULAsrcB);
 
-	int estado = 0;
+	integer estado = 0;
 	
 	//estado state = LER;	
 
 	input wire clk;
-	output reg[2:0] IorD; 
+	output reg[2:0] IorD, ULAsrcA, ULAsrcB; 
 
 	always @(posedge clk) begin
 	

@@ -1,5 +1,25 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="HW">
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux29" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux30" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux56" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Memoria:inst4|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_g2a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux26" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux31" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux57" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux62" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux27" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux58" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux63" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Memoria:inst4|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_g2a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Memoria:inst4|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_g2a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Memoria:inst4|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_g2a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux24" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux28" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux59" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux60" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux25" CBX_FILE_NAME="mux_5oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|bloco_teste1|Ula32:inst8|lpm_mux:Mux61" CBX_FILE_NAME="mux_5oc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

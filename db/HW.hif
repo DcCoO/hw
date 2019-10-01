@@ -78,48 +78,14 @@ ON
 }
 # hierarchies {
 Registrador:PC
+Registrador:ULAsrcA
+Registrador:ULAsrcB
 Registrador:A
 Registrador:B
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-mux6
-# storage
-db|HW.(3).cnf
-db|HW.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-mux6.v
-18e3facc5584622a4323f365af0f3f3
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-mux6:inst12
-}
 # macro_sequence
 
 # end
@@ -789,10 +755,43 @@ Memoria:inst4|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block
 
 # end
 # entity
+Ula32
+# storage
+db|HW.(9).cnf
+db|HW.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ula32.vhd
+d6bb5bfd211de44547e9b6fe9d17a72
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Ula32:inst8
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 altsyncram_g2a1
 # storage
-db|HW.(8).cnf
-db|HW.(8).cnf
+db|HW.(3).cnf
+db|HW.(3).cnf
 # case_insensitive
 # source_file
 db|altsyncram_g2a1.tdf
@@ -883,7 +882,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-0
+2c831aeda1198545b5de5643863d8053
 }
 # hierarchies {
 Memoria:inst4|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
@@ -895,18 +894,126 @@ Memoria:inst4|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsync
 
 # end
 # entity
-Ula32
+IorD
 # storage
-db|HW.(9).cnf
-db|HW.(9).cnf
+db|HW.(8).cnf
+db|HW.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+iord.v
+159d5a4ad0ed8b2eadac2dd086bf2c5b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+IorD:inst2
+}
+# macro_sequence
+
+# end
+# entity
+ULAsrcA
+# storage
+db|HW.(10).cnf
+db|HW.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ulasrca.v
+5972e0a71c452f98c516e8338af29b23
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ULAsrcA:inst7
+}
+# macro_sequence
+
+# end
+# entity
+ULAsrcB
+# storage
+db|HW.(12).cnf
+db|HW.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ulasrcb.v
+39132b6eab6f2c6b539e685e678721a3
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ULAsrcB:inst5
+}
+# macro_sequence
+
+# end
+# entity
+Instr_Reg
+# storage
+db|HW.(13).cnf
+db|HW.(13).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-ula32.vhd
-d6bb5bfd211de44547e9b6fe9d17a72
+instr_reg.vhd
+2210c8a335c3f44acebaf05a94bee
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -919,7 +1026,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-Ula32:inst8
+Instr_Reg:inst1
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -935,7 +1042,7 @@ db|HW.(0).cnf
 # case_insensitive
 # source_file
 bloco_teste1.bdf
-3c1074022472af9c33c7e457e6e63
+3dd341246c1c21c5bae6ad143ed6e8f
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -943,6 +1050,42 @@ AUTO
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+Controlador
+# storage
+db|HW.(11).cnf
+db|HW.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+controlador.v
+59c5bc738c2d56d046599a4f36792727
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Controlador:inst6
 }
 # macro_sequence
 
