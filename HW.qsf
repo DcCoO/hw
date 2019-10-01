@@ -53,11 +53,13 @@ set_global_assignment -name VHDL_FILE ula32.vhd
 set_global_assignment -name VHDL_FILE Banco_reg.vhd
 set_global_assignment -name BDF_FILE bloco_teste1.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE teste_waveform.vwf
-set_global_assignment -name VERILOG_FILE mux6.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VECTOR_WAVEFORM_FILE pc_waveform.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE pc_waveform.vwf
+set_global_assignment -name VERILOG_FILE IorD.v
+set_global_assignment -name VERILOG_FILE Controlador.v
+set_global_assignment -name VERILOG_FILE ULAsrcA.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
