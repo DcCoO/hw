@@ -1,5 +1,5 @@
 Flow report for HW
-Tue Oct 01 16:22:49 2019
+Sat Oct 05 22:17:43 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Flow Status                   ; Successful - Tue Oct 01 16:22:48 2019         ;
+; Flow Status                   ; Successful - Sat Oct 05 22:17:43 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; HW                                            ;
 ; Top-level Entity Name         ; bloco_teste1                                  ;
 ; Family                        ; Stratix II                                    ;
 ; Met timing requirements       ; Yes                                           ;
-; Logic utilization             ; < 1 %                                         ;
-;     Combinational ALUTs       ; 38 / 12,480 ( < 1 % )                         ;
-;     Dedicated logic registers ; 16 / 12,480 ( < 1 % )                         ;
-; Total registers               ; 16                                            ;
-; Total pins                    ; 36 / 343 ( 10 % )                             ;
+; Logic utilization             ; 1 %                                           ;
+;     Combinational ALUTs       ; 127 / 12,480 ( 1 % )                          ;
+;     Dedicated logic registers ; 103 / 12,480 ( < 1 % )                        ;
+; Total registers               ; 103                                           ;
+; Total pins                    ; 278 / 343 ( 81 % )                            ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 8,192 / 419,328 ( 2 % )                       ;
 ; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/01/2019 16:22:33 ;
+; Start date & time ; 10/05/2019 22:17:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HW                  ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------+---------------+--------------+----------------+
 ; Assignment Name                    ; Value                          ; Default Value ; Entity Name  ; Section Id     ;
 +------------------------------------+--------------------------------+---------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 17727280413387.156995775208936 ; --            ; --           ; --             ;
+; COMPILER_SIGNATURE_ID              ; 10995770589200.157032464513012 ; --            ; --           ; --             ;
 ; PARTITION_COLOR                    ; 16764057                       ; --            ; bloco_teste1 ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; bloco_teste1 ; Top            ;
 ; TOP_LEVEL_ENTITY                   ; bloco_teste1                   ; HW            ; --           ; --             ;
@@ -88,11 +88,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 4489 MB             ; 00:00:03                           ;
-; Fitter                  ; 00:00:07     ; 1.0                     ; 4595 MB             ; 00:00:06                           ;
-; Assembler               ; 00:00:03     ; 1.0                     ; 4419 MB             ; 00:00:02                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 4347 MB             ; 00:00:00                           ;
-; Total                   ; 00:00:16     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 4493 MB             ; 00:00:05                           ;
+; Fitter                  ; 00:00:07     ; 1.0                     ; 4596 MB             ; 00:00:09                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 4421 MB             ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 4352 MB             ; 00:00:01                           ;
+; Total                   ; 00:00:14     ; --                      ; --                  ; 00:00:17                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,10 +101,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; HWC17            ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; HWC17            ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; HWC17            ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; HWC17            ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis    ; g5c17            ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; g5c17            ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; g5c17            ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; g5c17            ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 
