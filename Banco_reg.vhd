@@ -69,7 +69,7 @@ END Banco_reg ;
 ARCHITECTURE behavioral_arch OF Banco_reg IS
 
 	SIGNAL Reg0		: STD_LOGIC_VECTOR (31 downto 0);		-- Conjunto 
-	SIGNAL Reg1		: STD_LOGIC_VECTOR (31 downto 0);		-- das informações
+	SIGNAL Reg1		: STD_LOGIC_VECTOR (31 downto 0);	
 	SIGNAL Reg2		: STD_LOGIC_VECTOR (31 downto 0);		-- pertencentes
 	SIGNAL Reg3		: STD_LOGIC_VECTOR (31 downto 0);		-- aos registradores.
 	SIGNAL Reg4		: STD_LOGIC_VECTOR (31 downto 0);		-- Esta CPU
@@ -78,8 +78,8 @@ ARCHITECTURE behavioral_arch OF Banco_reg IS
 	SIGNAL Reg7		: STD_LOGIC_VECTOR (31 downto 0);		-- de uso
 	SIGNAL Reg8		: STD_LOGIC_VECTOR (31 downto 0);		-- comum.
 	SIGNAL Reg9 	: STD_LOGIC_VECTOR (31 downto 0);
-	SIGNAL Reg10	: STD_LOGIC_VECTOR (31 downto 0);
-	SIGNAL Reg11	: STD_LOGIC_VECTOR (31 downto 0);
+	SIGNAL Reg10	: STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
+	SIGNAL Reg11	: STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001101";
 	SIGNAL Reg12	: STD_LOGIC_VECTOR (31 downto 0);
 	SIGNAL Reg13	: STD_LOGIC_VECTOR (31 downto 0);
 	SIGNAL Reg14	: STD_LOGIC_VECTOR (31 downto 0);
