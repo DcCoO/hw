@@ -44,8 +44,8 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-Registrador:PC
 Registrador:A
+Registrador:PC
 Registrador:B
 }
 # lmf
@@ -1026,19 +1026,19 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-Banco_reg
+Filter
 # storage
-db|HW.(17).cnf
-db|HW.(17).cnf
+db|HW.(3).cnf
+db|HW.(3).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
-# case_insensitive
+# case_sensitive
 # source_file
-banco_reg.vhd
-bdfcbee2ff23a67ef2956bea5d9bb2
-5
+filter.v
+cd2bc4805dfacf59e2e1c750ee5954e9
+8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
 OFF
@@ -1048,13 +1048,16 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
 }
 # hierarchies {
-Banco_reg:inst10
+Filter:inst14
 }
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
@@ -1066,7 +1069,7 @@ db|HW.(0).cnf
 # case_insensitive
 # source_file
 bloco_teste1.bdf
-645a92f4b7fc1077ae458b10846ee7b1
+948db872ebbbad808795943a44f2
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -1090,7 +1093,7 @@ ON
 # case_sensitive
 # source_file
 controlador.v
-f2199275e97815cc508232286dde0
+59885c2e929cb79bb43421c51f4f16a6
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1117,8 +1120,8 @@ Controlador:inst
 # entity
 altsyncram_g2a1
 # storage
-db|HW.(3).cnf
-db|HW.(3).cnf
+db|HW.(17).cnf
+db|HW.(17).cnf
 # case_insensitive
 # source_file
 db|altsyncram_g2a1.tdf
@@ -1209,7 +1212,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-f07dc8e29c80336977b1a23e6ef1ae
+bfc49ed37e98385e7d75c9caeef3d1ef
 }
 # hierarchies {
 Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
@@ -1217,6 +1220,39 @@ Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncra
 Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
 Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
 }
+# macro_sequence
+
+# end
+# entity
+Banco_reg
+# storage
+db|HW.(18).cnf
+db|HW.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+banco_reg.vhd
+54846f551a7c8158818038cc2a21585b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Banco_reg:inst10
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end

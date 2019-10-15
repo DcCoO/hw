@@ -5,7 +5,7 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 	integer estado = 0;
 	
 	//estados
-	integer LER = 0, DECODIFICAR = 1, WAIT = 2, WRITEREG = 3;
+	integer LER = 0, DECODIFICAR = 1, WAIT = 2, WRITEREG = 3, TEMP = 4;
 	
 	//estado state = LER;	
 
@@ -54,15 +54,18 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 				Load_IR <= 1'b0;
 				case(opcode)
 					0: begin
-						if(funct == 22){		//SUB
-							Load_A = 1'b1;
-							Load_B = 1'b1;
-							ULA_select = 3'b010;
-							ULAsrcA = 2'b01;
-							ULAsrcB = 2'b00;
-							estado = WRITEREG;	
-						}
-					
+						
+						case(funct)
+							22: begin
+								Load_A = 1'b1;
+								Load_B = 1'b1;
+								ULA_select = 3'b010;
+								ULAsrcA = 2'b01;
+								ULAsrcB = 2'b00;
+								estado = WRITEREG;	
+							end
+						endcase
+											
 					end
 			
 					8: begin					//ADDI
@@ -82,6 +85,9 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 				//salvar no registrador destino
 				RegWrite = 1'b1;
 				estado = LER;
+			end
+			
+			TEMP: begin
 			end
 			
 			
