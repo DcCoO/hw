@@ -4,8 +4,10 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 
 	integer estado = 0;
 	
+	integer writeReg, writeData;
+	
 	//estados
-	integer LER = 0, DECODIFICAR = 1, WAIT = 2, WRITEREG = 3, TEMP = 4;
+	integer LER = 0, DECODIFICAR = 1, WAIT = 2, LOAD_ULAOUT = 3, WRITEREG = 4, TEMP = 5;
 	
 	//estado state = LER;	
 
@@ -13,7 +15,8 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 	input wire[4:0] shamt;
 	input wire[5:0] opcode, funct;
 	output reg Load_IR, RegWrite, Load_ULAOut, Load_A, Load_B, MemWrite, Load_PC;
-	output reg[2:0] IorD, ULAsrcA, ULAsrcB, ULA_select, WriteRegMux, WriteDataMux;
+	output reg[2:0] IorD, ULAsrcA, ULAsrcB, ULA_select, WriteRegMux;
+	output reg[4:0] WriteDataMux;
 	output reg[31:0] state;
 	 
 
@@ -24,6 +27,7 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 		case(estado)
 			
 			LER: begin
+				Load_ULAOut = 1'b0;
 				RegWrite = 1'b0;
 				Load_PC = 1'b1;
 				//IorD = 3'b000;
@@ -38,10 +42,6 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 			DECODIFICAR: begin
 				Load_PC = 1'b0;
 				Load_IR = 1'b1;
-				//Load_ULAOut = 1'b0;
-				//Load_A = 1'b1;
-				//Load_B = 1'b1;
-				//RegWrite = 1'b0;
 				
 				estado = WAIT;
 				
@@ -56,34 +56,47 @@ module Controlador(clk, opcode, IorD, ULAsrcA, ULAsrcB,
 					0: begin
 						
 						case(funct)
-							22: begin
+							22: begin					//SUB
 								Load_A = 1'b1;
 								Load_B = 1'b1;
+								Load_ULAOut = 1'b1;
 								ULA_select = 3'b010;
 								ULAsrcA = 2'b01;
 								ULAsrcB = 2'b00;
-								estado = TEMP;	
+								writeReg = 2'b00;
+								writeData = 5'b00000;								
+								estado = LOAD_ULAOUT;
+									
 							end
 						endcase
+						
 											
 					end
 			
-					8: begin					//ADDI
+					8: begin							//ADDI
 						Load_A = 1'b1;
 						Load_B = 1'b1;
+						Load_ULAOut = 1'b1;
 						ULA_select = 3'b001;
 						ULAsrcA = 2'b01;
 						ULAsrcB = 2'b10;
-						estado = WRITEREG;				
+						writeReg = 2'b01;
+						writeData = 5'b00000;
+						estado = LOAD_ULAOUT;				
 					end
 					
 				endcase
 			end
 			
+			LOAD_ULAOUT: begin
+				estado = WRITEREG;
+			end	
+			
 			WRITEREG: begin
-				
-				//salvar no registrador destino
 				RegWrite = 1'b1;
+				WriteRegMux = writeReg;
+				WriteDataMux = writeData;
+				//Load_ULAOut = 1'b0;
 				estado = LER;
 			end
 			

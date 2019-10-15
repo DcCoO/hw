@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HW
-Tue Oct 15 15:22:05 2019
+Tue Oct 15 19:12:48 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -54,16 +54,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue Oct 15 15:22:05 2019         ;
+; Analysis & Synthesis Status   ; Successful - Tue Oct 15 19:12:48 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; HW                                            ;
 ; Top-level Entity Name         ; bloco_teste1                                  ;
 ; Family                        ; Stratix II                                    ;
 ; Logic utilization             ; N/A                                           ;
-;     Combinational ALUTs       ; 970                                           ;
-;     Dedicated logic registers ; 1,182                                         ;
-; Total registers               ; 1182                                          ;
-; Total pins                    ; 305                                           ;
+;     Combinational ALUTs       ; 974                                           ;
+;     Dedicated logic registers ; 1,200                                         ;
+; Total registers               ; 1200                                          ;
+; Total pins                    ; 337                                           ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 8,192                                         ;
 ; DSP block 9-bit elements      ; 0                                             ;
@@ -184,7 +184,8 @@ applicable agreement for further details.
 ; ULAsrcA.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/ULAsrcA.v                             ;
 ; ULAsrcB.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/ULAsrcB.v                             ;
 ; SignExtend16to32.v               ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/SignExtend16to32.v                    ;
-; Filter.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/Filter.v                              ;
+; WriteRegMux.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/WriteRegMux.v                         ;
+; WriteDataMux.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/WriteDataMux.v                        ;
 ; lpm_ram_dq.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
 ; altram.tdf                       ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altram.tdf     ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
@@ -198,39 +199,39 @@ applicable agreement for further details.
 +-----------------------------------------------+-------+
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 970   ;
-; Dedicated logic registers                     ; 1182  ;
+; Estimated ALUTs Used                          ; 974   ;
+; Dedicated logic registers                     ; 1200  ;
 ;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 16    ;
+; Estimated ALUTs Unavailable                   ; 1     ;
 ;                                               ;       ;
-; Total combinational functions                 ; 970   ;
+; Total combinational functions                 ; 974   ;
 ; Combinational ALUT usage by number of inputs  ;       ;
 ;     -- 7 input functions                      ; 0     ;
-;     -- 6 input functions                      ; 728   ;
-;     -- 5 input functions                      ; 36    ;
-;     -- 4 input functions                      ; 56    ;
-;     -- <=3 input functions                    ; 150   ;
+;     -- 6 input functions                      ; 725   ;
+;     -- 5 input functions                      ; 37    ;
+;     -- 4 input functions                      ; 53    ;
+;     -- <=3 input functions                    ; 159   ;
 ;                                               ;       ;
 ; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 947   ;
+;     -- normal mode                            ; 951   ;
 ;     -- extended LUT mode                      ; 0     ;
 ;     -- arithmetic mode                        ; 23    ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 1968  ;
+; Estimated ALUT/register pairs used            ; 1971  ;
 ;                                               ;       ;
-; Total registers                               ; 1182  ;
-;     -- Dedicated logic registers              ; 1182  ;
+; Total registers                               ; 1200  ;
+;     -- Dedicated logic registers              ; 1200  ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 984   ;
+; Estimated ALMs:  partially or completely used ; 986   ;
 ;                                               ;       ;
-; I/O pins                                      ; 305   ;
+; I/O pins                                      ; 337   ;
 ; Total block memory bits                       ; 8192  ;
 ; Maximum fan-out node                          ; clock ;
-; Maximum fan-out                               ; 1214  ;
-; Total fan-out                                 ; 9227  ;
-; Average fan-out                               ; 3.71  ;
+; Maximum fan-out                               ; 1232  ;
+; Total fan-out                                 ; 9330  ;
+; Average fan-out                               ; 3.67  ;
 +-----------------------------------------------+-------+
 
 
@@ -239,24 +240,23 @@ applicable agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
-; |bloco_teste1                                   ; 970 (1)           ; 1182 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 305  ; 0            ; |bloco_teste1                                                                                                         ; work         ;
-;    |Banco_reg:inst10|                           ; 742 (742)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Banco_reg:inst10                                                                                        ; work         ;
-;    |Controlador:inst|                           ; 15 (15)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Controlador:inst                                                                                        ; work         ;
-;    |Filter:inst14|                              ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Filter:inst14                                                                                           ; work         ;
+; |bloco_teste1                                   ; 974 (1)           ; 1200 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 337  ; 0            ; |bloco_teste1                                                                                                         ; work         ;
+;    |Banco_reg:inst10|                           ; 741 (741)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Banco_reg:inst10                                                                                        ; work         ;
+;    |Controlador:inst|                           ; 18 (18)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Controlador:inst                                                                                        ; work         ;
 ;    |Instr_Reg:inst3|                            ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Instr_Reg:inst3                                                                                         ; work         ;
-;    |Memoria:inst2|                              ; 23 (23)           ; 0 (0)        ; 8192              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2                                                                                           ; work         ;
+;    |Memoria:inst2|                              ; 23 (23)           ; 0 (0)        ; 8192              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2                                                                                           ;              ;
 ;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ;              ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_g2a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated   ; work         ;
-;       |lpm_ram_dq:MEM_plus_Three|               ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Three                                                                 ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ; work         ;
+;                |altsyncram_g2a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated   ;              ;
+;       |lpm_ram_dq:MEM_plus_Three|               ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
 ;                |altsyncram_g2a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated ; work         ;
-;       |lpm_ram_dq:MEM_plus_Two|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two                                                                   ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ; work         ;
-;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ; work         ;
-;                |altsyncram_g2a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated   ; work         ;
+;       |lpm_ram_dq:MEM_plus_Two|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
+;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
+;                |altsyncram_g2a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated   ;              ;
 ;       |lpm_ram_dq:MEM|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM                                                                            ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
@@ -264,9 +264,11 @@ applicable agreement for further details.
 ;    |Registrador:A|                              ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Registrador:A                                                                                           ; work         ;
 ;    |Registrador:B|                              ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Registrador:B                                                                                           ; work         ;
 ;    |Registrador:PC|                             ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Registrador:PC                                                                                          ; work         ;
+;    |Registrador:ULAOut|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Registrador:ULAOut                                                                                      ; work         ;
 ;    |ULAsrcA:inst11|                             ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|ULAsrcA:inst11                                                                                          ;              ;
 ;    |ULAsrcB:inst12|                             ; 33 (33)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|ULAsrcB:inst12                                                                                          ; work         ;
-;    |Ula32:inst1|                                ; 124 (124)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Ula32:inst1                                                                                             ; work         ;
+;    |Ula32:inst1|                                ; 121 (121)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Ula32:inst1                                                                                             ; work         ;
+;    |WriteRegMux:inst4|                          ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|WriteRegMux:inst4                                                                                       ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -283,42 +285,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+----------------------------------------+--------------------------------------------+
-; Register name                          ; Reason for Removal                         ;
-+----------------------------------------+--------------------------------------------+
-; Controlador:inst|estado[3..12]         ; Merged with Controlador:inst|estado[13]    ;
-; Controlador:inst|Load_B                ; Merged with Controlador:inst|Load_A        ;
-; Controlador:inst|estado[16..31]        ; Merged with Controlador:inst|estado[15]    ;
-; Controlador:inst|ULAsrcB[2]            ; Merged with Controlador:inst|ULA_select[2] ;
-; Controlador:inst|ULAsrcA[1..2]         ; Merged with Controlador:inst|ULA_select[2] ;
-; Controlador:inst|ULA_select[2]         ; Stuck at GND due to stuck port data_in     ;
-; Controlador:inst|estado[13..15]        ; Stuck at GND due to stuck port data_in     ;
-; Controlador:inst|state[3..31]          ; Stuck at GND due to stuck port data_in     ;
-; Controlador:inst|Load_A                ; Stuck at VCC due to stuck port data_in     ;
-; Total Number of Removed Registers = 64 ;                                            ;
-+----------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; Controlador:inst|ULAsrcA[1]            ; Merged with Controlador:inst|ULAsrcA[2]     ;
+; Controlador:inst|ULAsrcB[2]            ; Merged with Controlador:inst|ULAsrcA[2]     ;
+; Controlador:inst|estado[11..30]        ; Merged with Controlador:inst|estado[31]     ;
+; Controlador:inst|estado[3..9]          ; Merged with Controlador:inst|estado[10]     ;
+; Controlador:inst|Load_B                ; Merged with Controlador:inst|Load_A         ;
+; Controlador:inst|writeReg[1]           ; Merged with Controlador:inst|writeReg[2]    ;
+; Controlador:inst|writeData[0..4]       ; Merged with Controlador:inst|writeReg[2]    ;
+; Controlador:inst|WriteRegMux[1]        ; Merged with Controlador:inst|WriteRegMux[2] ;
+; Controlador:inst|WriteDataMux[0..4]    ; Merged with Controlador:inst|WriteRegMux[2] ;
+; Controlador:inst|Load_A                ; Stuck at VCC due to stuck port data_in      ;
+; Controlador:inst|ULA_select[2]         ; Stuck at GND due to stuck port data_in      ;
+; Controlador:inst|ULAsrcA[2]            ; Stuck at GND due to stuck port data_in      ;
+; Controlador:inst|estado[10,31]         ; Stuck at GND due to stuck port data_in      ;
+; Controlador:inst|writeReg[2]           ; Stuck at GND due to stuck port data_in      ;
+; Controlador:inst|state[3..31]          ; Stuck at GND due to stuck port data_in      ;
+; Controlador:inst|WriteRegMux[2]        ; Stuck at GND due to stuck port data_in      ;
+; Controlador:inst|Load_ULAOut           ; Merged with Controlador:inst|ULAsrcA[0]     ;
+; Total Number of Removed Registers = 79 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                   ;
-+-----------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name               ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+-----------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Controlador:inst|estado[15] ; Stuck at GND              ; Controlador:inst|state[31], Controlador:inst|state[30], Controlador:inst|state[29], ;
-;                             ; due to stuck port data_in ; Controlador:inst|state[28], Controlador:inst|state[27], Controlador:inst|state[26], ;
-;                             ;                           ; Controlador:inst|state[25], Controlador:inst|state[24], Controlador:inst|state[23], ;
-;                             ;                           ; Controlador:inst|state[22], Controlador:inst|state[21], Controlador:inst|state[20], ;
-;                             ;                           ; Controlador:inst|state[19], Controlador:inst|state[18], Controlador:inst|state[17], ;
-;                             ;                           ; Controlador:inst|state[16], Controlador:inst|state[15]                              ;
-; Controlador:inst|estado[13] ; Stuck at GND              ; Controlador:inst|state[13], Controlador:inst|state[12], Controlador:inst|state[11], ;
-;                             ; due to stuck port data_in ; Controlador:inst|state[10], Controlador:inst|state[9], Controlador:inst|state[8],   ;
-;                             ;                           ; Controlador:inst|state[7], Controlador:inst|state[6], Controlador:inst|state[5],    ;
-;                             ;                           ; Controlador:inst|state[4], Controlador:inst|state[3]                                ;
-; Controlador:inst|estado[14] ; Stuck at GND              ; Controlador:inst|state[14]                                                          ;
-;                             ; due to stuck port data_in ;                                                                                     ;
-+-----------------------------+---------------------------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Controlador:inst|estado[31]  ; Stuck at GND              ; Controlador:inst|state[31], Controlador:inst|state[30], Controlador:inst|state[29], ;
+;                              ; due to stuck port data_in ; Controlador:inst|state[28], Controlador:inst|state[27], Controlador:inst|state[26], ;
+;                              ;                           ; Controlador:inst|state[25], Controlador:inst|state[24], Controlador:inst|state[23], ;
+;                              ;                           ; Controlador:inst|state[22], Controlador:inst|state[21], Controlador:inst|state[20], ;
+;                              ;                           ; Controlador:inst|state[19], Controlador:inst|state[18], Controlador:inst|state[17], ;
+;                              ;                           ; Controlador:inst|state[16], Controlador:inst|state[15], Controlador:inst|state[14], ;
+;                              ;                           ; Controlador:inst|state[13], Controlador:inst|state[12], Controlador:inst|state[11]  ;
+; Controlador:inst|estado[10]  ; Stuck at GND              ; Controlador:inst|state[10], Controlador:inst|state[9], Controlador:inst|state[8],   ;
+;                              ; due to stuck port data_in ; Controlador:inst|state[7], Controlador:inst|state[6], Controlador:inst|state[5],    ;
+;                              ;                           ; Controlador:inst|state[4], Controlador:inst|state[3]                                ;
+; Controlador:inst|writeReg[2] ; Stuck at GND              ; Controlador:inst|WriteRegMux[2]                                                     ;
+;                              ; due to stuck port data_in ;                                                                                     ;
++------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -326,12 +336,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1182  ;
+; Total registers                              ; 1200  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1090  ;
+; Number of registers using Clock Enable       ; 1122  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -341,30 +351,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; Banco_reg:inst10|Reg10[4]              ; 2       ;
 ; Banco_reg:inst10|Reg11[3]              ; 2       ;
-; Banco_reg:inst10|Reg10[3]              ; 2       ;
 ; Banco_reg:inst10|Reg11[2]              ; 2       ;
 ; Banco_reg:inst10|Reg10[2]              ; 2       ;
 ; Banco_reg:inst10|Reg11[0]              ; 2       ;
-; Total number of inverted registers = 6 ;         ;
+; Banco_reg:inst10|Reg10[0]              ; 2       ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 8:1                ; 2 bits    ; 10 ALUTs      ; 6 ALUTs              ; 4 ALUTs                ; Yes        ; |bloco_teste1|Controlador:inst|estado[0] ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux61          ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 128 ALUTs            ; 32 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux14          ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux23       ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux2        ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|Controlador:inst|Selector9 ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux8      ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux46     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 2 ALUTs              ; 2 ALUTs                ; Yes        ; |bloco_teste1|Controlador:inst|writeReg[0] ;
+; 9:1                ; 2 bits    ; 12 ALUTs      ; 8 ALUTs              ; 4 ALUTs                ; Yes        ; |bloco_teste1|Controlador:inst|estado[0]   ;
+; 1:1                ; 32 bits   ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|WriteDataMux:inst6|Mux30     ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux33            ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 128 ALUTs            ; 32 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux7             ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux20         ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux2          ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|Controlador:inst|Selector8   ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux30       ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux62       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -501,7 +512,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Oct 15 15:21:51 2019
+    Info: Processing started: Tue Oct 15 19:12:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HW -c HW
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file instr_reg.vhd
@@ -582,14 +593,12 @@ Info (10041): Inferred latch for "out[30]" at ULAsrcA.v(7)
 Info (10041): Inferred latch for "out[31]" at ULAsrcA.v(7)
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:A"
 Info: Elaborating entity "Controlador" for hierarchy "Controlador:inst"
-Warning (10762): Verilog HDL Case Statement warning at Controlador.v(24): can't check case statement for completeness because the case expression has too many possible states
-Warning (10763): Verilog HDL warning at Controlador.v(24): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10034): Output port "IorD" at Controlador.v(16) has no driver
-Warning (10034): Output port "WriteRegMux" at Controlador.v(16) has no driver
-Warning (10034): Output port "WriteDataMux" at Controlador.v(16) has no driver
-Warning (10034): Output port "Load_ULAOut" at Controlador.v(15) has no driver
-Warning (10034): Output port "MemWrite" at Controlador.v(15) has no driver
-Info: Elaborating entity "Filter" for hierarchy "Filter:inst14"
+Warning (10230): Verilog HDL assignment warning at Controlador.v(97): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at Controlador.v(98): truncated value with size 32 to match size of target (5)
+Warning (10762): Verilog HDL Case Statement warning at Controlador.v(27): can't check case statement for completeness because the case expression has too many possible states
+Warning (10763): Verilog HDL warning at Controlador.v(27): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10034): Output port "IorD" at Controlador.v(18) has no driver
+Warning (10034): Output port "MemWrite" at Controlador.v(17) has no driver
 Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:inst3"
 Info: Elaborating entity "Memoria" for hierarchy "Memoria:inst2"
 Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM"
@@ -654,7 +663,61 @@ Info (10041): Inferred latch for "out[29]" at ULAsrcB.v(7)
 Info (10041): Inferred latch for "out[30]" at ULAsrcB.v(7)
 Info (10041): Inferred latch for "out[31]" at ULAsrcB.v(7)
 Info: Elaborating entity "Banco_reg" for hierarchy "Banco_reg:inst10"
+Info: Elaborating entity "WriteDataMux" for hierarchy "WriteDataMux:inst6"
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(10): variable "ULAOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(11): variable "LS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(12): variable "HI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(13): variable "LO" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(14): variable "SignExtend1to32" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(15): variable "SignExtend16to32" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(16): variable "ShiftLeft16" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(17): variable "Exception" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteDataMux.v(18): variable "ShiftReg" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at WriteDataMux.v(9): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at WriteDataMux.v(7): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out[0]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[1]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[2]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[3]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[4]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[5]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[6]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[7]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[8]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[9]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[10]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[11]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[12]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[13]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[14]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[15]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[16]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[17]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[18]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[19]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[20]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[21]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[22]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[23]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[24]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[25]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[26]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[27]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[28]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[29]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[30]" at WriteDataMux.v(7)
+Info (10041): Inferred latch for "out[31]" at WriteDataMux.v(7)
 Info: Elaborating entity "SignExtend16to32" for hierarchy "SignExtend16to32:inst13"
+Info: Elaborating entity "WriteRegMux" for hierarchy "WriteRegMux:inst4"
+Warning (10235): Verilog HDL Always Construct warning at WriteRegMux.v(10): variable "RD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at WriteRegMux.v(11): variable "RT" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at WriteRegMux.v(9): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at WriteRegMux.v(7): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out[0]" at WriteRegMux.v(7)
+Info (10041): Inferred latch for "out[1]" at WriteRegMux.v(7)
+Info (10041): Inferred latch for "out[2]" at WriteRegMux.v(7)
+Info (10041): Inferred latch for "out[3]" at WriteRegMux.v(7)
+Info (10041): Inferred latch for "out[4]" at WriteRegMux.v(7)
 Warning: LATCH primitive "ULAsrcA:inst11|out[31]" is permanently enabled
 Warning: LATCH primitive "ULAsrcA:inst11|out[30]" is permanently enabled
 Warning: LATCH primitive "ULAsrcA:inst11|out[29]" is permanently enabled
@@ -719,6 +782,43 @@ Warning: LATCH primitive "ULAsrcB:inst12|out[3]" is permanently enabled
 Warning: LATCH primitive "ULAsrcB:inst12|out[2]" is permanently enabled
 Warning: LATCH primitive "ULAsrcB:inst12|out[1]" is permanently enabled
 Warning: LATCH primitive "ULAsrcB:inst12|out[0]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[31]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[0]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[1]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[2]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[3]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[4]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[30]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[29]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[28]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[27]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[26]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[25]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[24]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[23]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[22]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[21]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[20]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[19]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[18]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[17]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[16]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[15]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[14]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[13]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[12]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[11]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[10]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[9]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[8]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[7]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[6]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[5]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[4]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[3]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[2]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[1]" is permanently enabled
+Warning: LATCH primitive "WriteDataMux:inst6|out[0]" is permanently enabled
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado[31]" is stuck at GND
     Warning (13410): Pin "estado[30]" is stuck at GND
@@ -750,15 +850,15 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado[4]" is stuck at GND
     Warning (13410): Pin "estado[3]" is stuck at GND
 Info: Generated suppressed messages file C:/Users/dcc4/Desktop/hw/HW.map.smsg
-Info: Implemented 2472 device resources after synthesis - the final resource count might be different
+Info: Implemented 2525 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
-    Info: Implemented 304 output pins
-    Info: Implemented 2135 logic cells
+    Info: Implemented 336 output pins
+    Info: Implemented 2156 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 112 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 163 warnings
     Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Tue Oct 15 15:22:05 2019
-    Info: Elapsed time: 00:00:14
+    Info: Processing ended: Tue Oct 15 19:12:48 2019
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:14
 
 

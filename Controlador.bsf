@@ -117,8 +117,8 @@ applicable agreement for further details.
 	(port
 		(pt 208 176)
 		(output)
-		(text "WriteDataMux[2..0]" (rect 0 0 95 12)(font "Arial" ))
-		(text "WriteDataMux[2..0]" (rect 92 171 187 183)(font "Arial" ))
+		(text "WriteDataMux[4..0]" (rect 0 0 95 12)(font "Arial" ))
+		(text "WriteDataMux[4..0]" (rect 92 171 187 183)(font "Arial" ))
 		(line (pt 208 176)(pt 192 176)(line_width 3))
 	)
 	(port

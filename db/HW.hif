@@ -47,6 +47,7 @@ ON
 Registrador:A
 Registrador:PC
 Registrador:B
+Registrador:ULAOut
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -858,39 +859,6 @@ ULAsrcB:inst12
 
 # end
 # entity
-WriteDataMux
-# storage
-db|HW.(14).cnf
-db|HW.(14).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-writedatamux.v
-da99b3d86bcb53c3a0ab229ab26f20c3
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 SignExtend16to32
 # storage
 db|HW.(16).cnf
@@ -922,39 +890,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 SignExtend16to32:inst13
-}
-# macro_sequence
-
-# end
-# entity
-WriteRegMux
-# storage
-db|HW.(15).cnf
-db|HW.(15).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-writeregmux.v
-a41443d8c43694cc7f168b7087862dc8
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
 }
 # macro_sequence
 
@@ -1055,65 +990,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-Filter:inst14
-}
-# macro_sequence
-
-# end
-# entity
-bloco_teste1
-# storage
-db|HW.(0).cnf
-db|HW.(0).cnf
-# case_insensitive
-# source_file
-bloco_teste1.bdf
-948db872ebbbad808795943a44f2
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-Controlador
-# storage
-db|HW.(1).cnf
-db|HW.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-controlador.v
-59885c2e929cb79bb43421c51f4f16a6
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Controlador:inst
-}
 # macro_sequence
 
 # end
@@ -1212,13 +1088,86 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-bfc49ed37e98385e7d75c9caeef3d1ef
+44b579707c7e829d2d661504ccef
 }
 # hierarchies {
 Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
 Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
 Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
 Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+WriteRegMux
+# storage
+db|HW.(14).cnf
+db|HW.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+writeregmux.v
+deedd864e912334f153713b87b3db053
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+WriteRegMux:inst4
+}
+# macro_sequence
+
+# end
+# entity
+WriteDataMux
+# storage
+db|HW.(15).cnf
+db|HW.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+writedatamux.v
+d7ba326c7ee3f468a32d2b72d2994
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+WriteDataMux:inst6
+WriteDataMux:inst5
 }
 # macro_sequence
 
@@ -1235,7 +1184,7 @@ ON
 # case_insensitive
 # source_file
 banco_reg.vhd
-54846f551a7c8158818038cc2a21585b
+ad5cc156c389f412edf7594dbb59d1d2
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1253,6 +1202,62 @@ Banco_reg:inst10
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bloco_teste1
+# storage
+db|HW.(0).cnf
+db|HW.(0).cnf
+# case_insensitive
+# source_file
+bloco_teste1.bdf
+a09f118850f8bec8c11577d8713436b4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Controlador
+# storage
+db|HW.(1).cnf
+db|HW.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+controlador.v
+e6d738d970219552dee8f7525ac6a14
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Controlador:inst
+}
 # macro_sequence
 
 # end
