@@ -1,7 +1,7 @@
 module WriteDataMux(seletor, ULAOut, LS, HI, LO, SignExtend1to32, SignExtend16to32, ShiftLeft16, Exception, ShiftReg, out);
 
 	input wire [4:0] seletor;
-	input wire [31:0] ULAOut;
+	input wire [31:0] ULAOut, LS, HI, LO, SignExtend1to32, SignExtend16to32, ShiftLeft16, Exception, ShiftReg;
 	output reg [31:0] out;
 	
 	always @(seletor) begin

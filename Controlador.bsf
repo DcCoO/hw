@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 224 304)
+	(rect 16 16 224 368)
 	(text "Controlador" (rect 5 0 61 12)(font "Arial" ))
-	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(text "inst" (rect 8 336 25 348)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -149,7 +149,35 @@ applicable agreement for further details.
 		(text "Load_PC" (rect 143 235 187 247)(font "Arial" ))
 		(line (pt 208 240)(pt 192 240)(line_width 1))
 	)
+	(port
+		(pt 208 256)
+		(output)
+		(text "divStart" (rect 0 0 38 12)(font "Arial" ))
+		(text "divStart" (rect 149 251 187 263)(font "Arial" ))
+		(line (pt 208 256)(pt 192 256)(line_width 1))
+	)
+	(port
+		(pt 208 272)
+		(output)
+		(text "multStart" (rect 0 0 44 12)(font "Arial" ))
+		(text "multStart" (rect 143 267 187 279)(font "Arial" ))
+		(line (pt 208 272)(pt 192 272)(line_width 1))
+	)
+	(port
+		(pt 208 288)
+		(output)
+		(text "Load_HI" (rect 0 0 41 12)(font "Arial" ))
+		(text "Load_HI" (rect 146 283 187 295)(font "Arial" ))
+		(line (pt 208 288)(pt 192 288)(line_width 1))
+	)
+	(port
+		(pt 208 304)
+		(output)
+		(text "Load_LO" (rect 0 0 43 12)(font "Arial" ))
+		(text "Load_LO" (rect 144 299 187 311)(font "Arial" ))
+		(line (pt 208 304)(pt 192 304)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 192 272)(line_width 1))
+		(rectangle (rect 16 16 192 336)(line_width 1))
 	)
 )

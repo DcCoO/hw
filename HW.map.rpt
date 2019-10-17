@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HW
-Tue Oct 15 19:12:48 2019
+Thu Oct 17 20:35:36 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -54,16 +54,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue Oct 15 19:12:48 2019         ;
+; Analysis & Synthesis Status   ; Successful - Thu Oct 17 20:35:36 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; HW                                            ;
 ; Top-level Entity Name         ; bloco_teste1                                  ;
 ; Family                        ; Stratix II                                    ;
 ; Logic utilization             ; N/A                                           ;
-;     Combinational ALUTs       ; 974                                           ;
+;     Combinational ALUTs       ; 989                                           ;
 ;     Dedicated logic registers ; 1,200                                         ;
 ; Total registers               ; 1200                                          ;
-; Total pins                    ; 337                                           ;
+; Total pins                    ; 438                                           ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 8,192                                         ;
 ; DSP block 9-bit elements      ; 0                                             ;
@@ -186,6 +186,9 @@ applicable agreement for further details.
 ; SignExtend16to32.v               ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/SignExtend16to32.v                    ;
 ; WriteRegMux.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/WriteRegMux.v                         ;
 ; WriteDataMux.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/WriteDataMux.v                        ;
+; Mult.v                           ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/Mult.v                                ;
+; Div.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/Div.v                                 ;
+; HILO_Mux.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/dcc4/Desktop/hw/HILO_Mux.v                            ;
 ; lpm_ram_dq.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
 ; altram.tdf                       ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altram.tdf     ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
@@ -199,39 +202,39 @@ applicable agreement for further details.
 +-----------------------------------------------+-------+
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 974   ;
+; Estimated ALUTs Used                          ; 989   ;
 ; Dedicated logic registers                     ; 1200  ;
 ;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 1     ;
+; Estimated ALUTs Unavailable                   ; 4     ;
 ;                                               ;       ;
-; Total combinational functions                 ; 974   ;
+; Total combinational functions                 ; 989   ;
 ; Combinational ALUT usage by number of inputs  ;       ;
 ;     -- 7 input functions                      ; 0     ;
-;     -- 6 input functions                      ; 725   ;
-;     -- 5 input functions                      ; 37    ;
-;     -- 4 input functions                      ; 53    ;
-;     -- <=3 input functions                    ; 159   ;
+;     -- 6 input functions                      ; 726   ;
+;     -- 5 input functions                      ; 39    ;
+;     -- 4 input functions                      ; 61    ;
+;     -- <=3 input functions                    ; 163   ;
 ;                                               ;       ;
 ; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 951   ;
+;     -- normal mode                            ; 966   ;
 ;     -- extended LUT mode                      ; 0     ;
 ;     -- arithmetic mode                        ; 23    ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 1971  ;
+; Estimated ALUT/register pairs used            ; 1982  ;
 ;                                               ;       ;
 ; Total registers                               ; 1200  ;
 ;     -- Dedicated logic registers              ; 1200  ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 986   ;
+; Estimated ALMs:  partially or completely used ; 991   ;
 ;                                               ;       ;
-; I/O pins                                      ; 337   ;
+; I/O pins                                      ; 438   ;
 ; Total block memory bits                       ; 8192  ;
 ; Maximum fan-out node                          ; clock ;
 ; Maximum fan-out                               ; 1232  ;
-; Total fan-out                                 ; 9330  ;
-; Average fan-out                               ; 3.67  ;
+; Total fan-out                                 ; 9422  ;
+; Average fan-out                               ; 3.54  ;
 +-----------------------------------------------+-------+
 
 
@@ -240,9 +243,9 @@ applicable agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
-; |bloco_teste1                                   ; 974 (1)           ; 1200 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 337  ; 0            ; |bloco_teste1                                                                                                         ; work         ;
-;    |Banco_reg:inst10|                           ; 741 (741)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Banco_reg:inst10                                                                                        ; work         ;
-;    |Controlador:inst|                           ; 18 (18)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Controlador:inst                                                                                        ; work         ;
+; |bloco_teste1                                   ; 989 (1)           ; 1200 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 438  ; 0            ; |bloco_teste1                                                                                                         ; work         ;
+;    |Banco_reg:inst10|                           ; 743 (743)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Banco_reg:inst10                                                                                        ; work         ;
+;    |Controlador:inst|                           ; 29 (29)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Controlador:inst                                                                                        ; work         ;
 ;    |Instr_Reg:inst3|                            ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Instr_Reg:inst3                                                                                         ; work         ;
 ;    |Memoria:inst2|                              ; 23 (23)           ; 0 (0)        ; 8192              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2                                                                                           ;              ;
 ;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Memoria:inst2|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
@@ -267,7 +270,7 @@ applicable agreement for further details.
 ;    |Registrador:ULAOut|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Registrador:ULAOut                                                                                      ; work         ;
 ;    |ULAsrcA:inst11|                             ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|ULAsrcA:inst11                                                                                          ;              ;
 ;    |ULAsrcB:inst12|                             ; 33 (33)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|ULAsrcB:inst12                                                                                          ; work         ;
-;    |Ula32:inst1|                                ; 121 (121)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Ula32:inst1                                                                                             ; work         ;
+;    |Ula32:inst1|                                ; 123 (123)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|Ula32:inst1                                                                                             ; work         ;
 ;    |WriteRegMux:inst4|                          ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |bloco_teste1|WriteRegMux:inst4                                                                                       ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -285,50 +288,316 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; Controlador:inst|ULAsrcA[1]            ; Merged with Controlador:inst|ULAsrcA[2]     ;
-; Controlador:inst|ULAsrcB[2]            ; Merged with Controlador:inst|ULAsrcA[2]     ;
-; Controlador:inst|estado[11..30]        ; Merged with Controlador:inst|estado[31]     ;
-; Controlador:inst|estado[3..9]          ; Merged with Controlador:inst|estado[10]     ;
-; Controlador:inst|Load_B                ; Merged with Controlador:inst|Load_A         ;
-; Controlador:inst|writeReg[1]           ; Merged with Controlador:inst|writeReg[2]    ;
-; Controlador:inst|writeData[0..4]       ; Merged with Controlador:inst|writeReg[2]    ;
-; Controlador:inst|WriteRegMux[1]        ; Merged with Controlador:inst|WriteRegMux[2] ;
-; Controlador:inst|WriteDataMux[0..4]    ; Merged with Controlador:inst|WriteRegMux[2] ;
-; Controlador:inst|Load_A                ; Stuck at VCC due to stuck port data_in      ;
-; Controlador:inst|ULA_select[2]         ; Stuck at GND due to stuck port data_in      ;
-; Controlador:inst|ULAsrcA[2]            ; Stuck at GND due to stuck port data_in      ;
-; Controlador:inst|estado[10,31]         ; Stuck at GND due to stuck port data_in      ;
-; Controlador:inst|writeReg[2]           ; Stuck at GND due to stuck port data_in      ;
-; Controlador:inst|state[3..31]          ; Stuck at GND due to stuck port data_in      ;
-; Controlador:inst|WriteRegMux[2]        ; Stuck at GND due to stuck port data_in      ;
-; Controlador:inst|Load_ULAOut           ; Merged with Controlador:inst|ULAsrcA[0]     ;
-; Total Number of Removed Registers = 79 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------+----------------------------------------------+
+; Register name                           ; Reason for Removal                           ;
++-----------------------------------------+----------------------------------------------+
+; Registrador:LO|Saida[31]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[31]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[30]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[30]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[29]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[29]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[28]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[28]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[27]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[27]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[26]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[26]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[25]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[25]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[24]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[24]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[23]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[23]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[22]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[22]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[21]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[21]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[20]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[20]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[19]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[19]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[18]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[18]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[17]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[17]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[16]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[16]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[15]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[15]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[14]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[14]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[13]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[13]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[12]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[12]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[11]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[11]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[10]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[10]                        ; Lost fanout                                  ;
+; Registrador:LO|Saida[9]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[9]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[8]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[8]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[7]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[7]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[6]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[6]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[5]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[5]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[4]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[4]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[3]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[3]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[2]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[2]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[1]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[1]                         ; Lost fanout                                  ;
+; Registrador:LO|Saida[0]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|lo[0]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[31]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[31]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[30]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[30]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[29]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[29]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[28]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[28]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[27]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[27]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[26]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[26]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[25]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[25]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[24]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[24]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[23]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[23]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[22]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[22]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[21]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[21]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[20]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[20]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[19]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[19]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[18]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[18]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[17]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[17]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[16]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[16]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[15]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[15]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[14]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[14]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[13]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[13]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[12]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[12]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[11]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[11]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[10]                ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[10]                        ; Lost fanout                                  ;
+; Registrador:HI|Saida[9]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[9]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[8]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[8]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[7]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[7]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[6]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[6]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[5]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[5]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[4]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[4]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[3]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[3]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[2]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[2]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[1]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[1]                         ; Lost fanout                                  ;
+; Registrador:HI|Saida[0]                 ; Stuck at GND due to stuck port clock         ;
+; Div:inst7|hi[0]                         ; Lost fanout                                  ;
+; Mult:inst5|LOW[0..31]                   ; Lost fanout                                  ;
+; Mult:inst5|HI[0..31]                    ; Lost fanout                                  ;
+; Mult:inst5|cont[0..6]                   ; Lost fanout                                  ;
+; Mult:inst5|negaA[0..64]                 ; Lost fanout                                  ;
+; Mult:inst5|B[0..64]                     ; Lost fanout                                  ;
+; Mult:inst5|A[0..64]                     ; Lost fanout                                  ;
+; Controlador:inst|divStart               ; Lost fanout                                  ;
+; Controlador:inst|Load_LO                ; Lost fanout                                  ;
+; Controlador:inst|Load_HI                ; Lost fanout                                  ;
+; Controlador:inst|afterWait[3..31]       ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|afterWait[2]           ; Stuck at VCC due to stuck port data_in       ;
+; Controlador:inst|afterWait[1]           ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|afterWait[0]           ; Stuck at VCC due to stuck port data_in       ;
+; Controlador:inst|Load_B                 ; Merged with Controlador:inst|Load_A          ;
+; Controlador:inst|WriteRegMux[2]         ; Merged with Controlador:inst|WriteDataMux[3] ;
+; Controlador:inst|WriteDataMux[0..2]     ; Merged with Controlador:inst|WriteDataMux[3] ;
+; Controlador:inst|WriteRegMux[1]         ; Merged with Controlador:inst|WriteDataMux[3] ;
+; Controlador:inst|WriteDataMux[4]        ; Merged with Controlador:inst|WriteDataMux[3] ;
+; Controlador:inst|estado[6..31]          ; Merged with Controlador:inst|estado[5]       ;
+; Controlador:inst|ULAsrcA[1..2]          ; Merged with Controlador:inst|ULAsrcB[2]      ;
+; Controlador:inst|estado[3]              ; Merged with Controlador:inst|estado[4]       ;
+; Controlador:inst|ULA_select[2]          ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|ULAsrcB[2]             ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|estado[4..5]           ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|WriteDataMux[3]        ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|state[3..31]           ; Stuck at GND due to stuck port data_in       ;
+; Controlador:inst|Load_A                 ; Stuck at VCC due to stuck port data_in       ;
+; Total Number of Removed Registers = 500 ;                                              ;
++-----------------------------------------+----------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                    ;
-+------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Controlador:inst|estado[31]  ; Stuck at GND              ; Controlador:inst|state[31], Controlador:inst|state[30], Controlador:inst|state[29], ;
-;                              ; due to stuck port data_in ; Controlador:inst|state[28], Controlador:inst|state[27], Controlador:inst|state[26], ;
-;                              ;                           ; Controlador:inst|state[25], Controlador:inst|state[24], Controlador:inst|state[23], ;
-;                              ;                           ; Controlador:inst|state[22], Controlador:inst|state[21], Controlador:inst|state[20], ;
-;                              ;                           ; Controlador:inst|state[19], Controlador:inst|state[18], Controlador:inst|state[17], ;
-;                              ;                           ; Controlador:inst|state[16], Controlador:inst|state[15], Controlador:inst|state[14], ;
-;                              ;                           ; Controlador:inst|state[13], Controlador:inst|state[12], Controlador:inst|state[11]  ;
-; Controlador:inst|estado[10]  ; Stuck at GND              ; Controlador:inst|state[10], Controlador:inst|state[9], Controlador:inst|state[8],   ;
-;                              ; due to stuck port data_in ; Controlador:inst|state[7], Controlador:inst|state[6], Controlador:inst|state[5],    ;
-;                              ;                           ; Controlador:inst|state[4], Controlador:inst|state[3]                                ;
-; Controlador:inst|writeReg[2] ; Stuck at GND              ; Controlador:inst|WriteRegMux[2]                                                     ;
-;                              ; due to stuck port data_in ;                                                                                     ;
-+------------------------------+---------------------------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++-------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++-------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Controlador:inst|afterWait[5] ; Stuck at GND              ; Controlador:inst|estado[5], Controlador:inst|state[31], Controlador:inst|state[30], ;
+;                               ; due to stuck port data_in ; Controlador:inst|state[29], Controlador:inst|state[28], Controlador:inst|state[27], ;
+;                               ;                           ; Controlador:inst|state[26], Controlador:inst|state[25], Controlador:inst|state[24], ;
+;                               ;                           ; Controlador:inst|state[23], Controlador:inst|state[22], Controlador:inst|state[21], ;
+;                               ;                           ; Controlador:inst|state[20], Controlador:inst|state[19], Controlador:inst|state[18], ;
+;                               ;                           ; Controlador:inst|state[17], Controlador:inst|state[16], Controlador:inst|state[15], ;
+;                               ;                           ; Controlador:inst|state[14], Controlador:inst|state[13], Controlador:inst|state[12], ;
+;                               ;                           ; Controlador:inst|state[11], Controlador:inst|state[10], Controlador:inst|state[9],  ;
+;                               ;                           ; Controlador:inst|state[8], Controlador:inst|state[7], Controlador:inst|state[6],    ;
+;                               ;                           ; Controlador:inst|state[5]                                                           ;
+; Registrador:LO|Saida[31]      ; Stuck at GND              ; Div:inst7|lo[31], Mult:inst5|LOW[31], Controlador:inst|divStart                     ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Controlador:inst|afterWait[4] ; Stuck at GND              ; Controlador:inst|estado[4], Controlador:inst|state[4], Controlador:inst|state[3]    ;
+;                               ; due to stuck port data_in ;                                                                                     ;
+; Registrador:LO|Saida[28]      ; Stuck at GND              ; Div:inst7|lo[28], Mult:inst5|LOW[28]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[27]      ; Stuck at GND              ; Div:inst7|lo[27], Mult:inst5|LOW[27]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[26]      ; Stuck at GND              ; Div:inst7|lo[26], Mult:inst5|LOW[26]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[25]      ; Stuck at GND              ; Div:inst7|lo[25], Mult:inst5|LOW[25]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[24]      ; Stuck at GND              ; Div:inst7|lo[24], Mult:inst5|LOW[24]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[23]      ; Stuck at GND              ; Div:inst7|lo[23], Mult:inst5|LOW[23]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[22]      ; Stuck at GND              ; Div:inst7|lo[22], Mult:inst5|LOW[22]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[21]      ; Stuck at GND              ; Div:inst7|lo[21], Mult:inst5|LOW[21]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[20]      ; Stuck at GND              ; Div:inst7|lo[20], Mult:inst5|LOW[20]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[19]      ; Stuck at GND              ; Div:inst7|lo[19], Mult:inst5|LOW[19]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[18]      ; Stuck at GND              ; Div:inst7|lo[18], Mult:inst5|LOW[18]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[17]      ; Stuck at GND              ; Div:inst7|lo[17], Mult:inst5|LOW[17]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[16]      ; Stuck at GND              ; Div:inst7|lo[16], Mult:inst5|LOW[16]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[15]      ; Stuck at GND              ; Div:inst7|lo[15], Mult:inst5|LOW[15]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[14]      ; Stuck at GND              ; Div:inst7|lo[14], Mult:inst5|LOW[14]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[13]      ; Stuck at GND              ; Div:inst7|lo[13], Mult:inst5|LOW[13]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[12]      ; Stuck at GND              ; Div:inst7|lo[12], Mult:inst5|LOW[12]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[11]      ; Stuck at GND              ; Div:inst7|lo[11], Mult:inst5|LOW[11]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[10]      ; Stuck at GND              ; Div:inst7|lo[10], Mult:inst5|LOW[10]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[9]       ; Stuck at GND              ; Div:inst7|lo[9], Mult:inst5|LOW[9]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[8]       ; Stuck at GND              ; Div:inst7|lo[8], Mult:inst5|LOW[8]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[7]       ; Stuck at GND              ; Div:inst7|lo[7], Mult:inst5|LOW[7]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[6]       ; Stuck at GND              ; Div:inst7|lo[6], Mult:inst5|LOW[6]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[5]       ; Stuck at GND              ; Div:inst7|lo[5], Mult:inst5|LOW[5]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[4]       ; Stuck at GND              ; Div:inst7|lo[4], Mult:inst5|LOW[4]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[3]       ; Stuck at GND              ; Div:inst7|lo[3], Mult:inst5|LOW[3]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[2]       ; Stuck at GND              ; Div:inst7|lo[2], Mult:inst5|LOW[2]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[1]       ; Stuck at GND              ; Div:inst7|lo[1], Mult:inst5|LOW[1]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[0]       ; Stuck at GND              ; Div:inst7|lo[0], Mult:inst5|LOW[0]                                                  ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[31]      ; Stuck at GND              ; Div:inst7|hi[31], Mult:inst5|HI[31]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[30]      ; Stuck at GND              ; Div:inst7|hi[30], Mult:inst5|HI[30]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[29]      ; Stuck at GND              ; Div:inst7|hi[29], Mult:inst5|HI[29]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[28]      ; Stuck at GND              ; Div:inst7|hi[28], Mult:inst5|HI[28]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[27]      ; Stuck at GND              ; Div:inst7|hi[27], Mult:inst5|HI[27]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[26]      ; Stuck at GND              ; Div:inst7|hi[26], Mult:inst5|HI[26]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[25]      ; Stuck at GND              ; Div:inst7|hi[25], Mult:inst5|HI[25]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[24]      ; Stuck at GND              ; Div:inst7|hi[24], Mult:inst5|HI[24]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[23]      ; Stuck at GND              ; Div:inst7|hi[23], Mult:inst5|HI[23]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[22]      ; Stuck at GND              ; Div:inst7|hi[22], Mult:inst5|HI[22]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[21]      ; Stuck at GND              ; Div:inst7|hi[21], Mult:inst5|HI[21]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[20]      ; Stuck at GND              ; Div:inst7|hi[20], Mult:inst5|HI[20]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[19]      ; Stuck at GND              ; Div:inst7|hi[19], Mult:inst5|HI[19]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[18]      ; Stuck at GND              ; Div:inst7|hi[18], Mult:inst5|HI[18]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[17]      ; Stuck at GND              ; Div:inst7|hi[17], Mult:inst5|HI[17]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[16]      ; Stuck at GND              ; Div:inst7|hi[16], Mult:inst5|HI[16]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[15]      ; Stuck at GND              ; Div:inst7|hi[15], Mult:inst5|HI[15]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[30]      ; Stuck at GND              ; Div:inst7|lo[30], Mult:inst5|LOW[30]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[13]      ; Stuck at GND              ; Div:inst7|hi[13], Mult:inst5|HI[13]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[12]      ; Stuck at GND              ; Div:inst7|hi[12], Mult:inst5|HI[12]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[11]      ; Stuck at GND              ; Div:inst7|hi[11], Mult:inst5|HI[11]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[10]      ; Stuck at GND              ; Div:inst7|hi[10], Mult:inst5|HI[10]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[9]       ; Stuck at GND              ; Div:inst7|hi[9], Mult:inst5|HI[9]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[8]       ; Stuck at GND              ; Div:inst7|hi[8], Mult:inst5|HI[8]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[7]       ; Stuck at GND              ; Div:inst7|hi[7], Mult:inst5|HI[7]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[14]      ; Stuck at GND              ; Div:inst7|hi[14], Mult:inst5|HI[14]                                                 ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[5]       ; Stuck at GND              ; Div:inst7|hi[5], Mult:inst5|HI[5]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[4]       ; Stuck at GND              ; Div:inst7|hi[4], Mult:inst5|HI[4]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[3]       ; Stuck at GND              ; Div:inst7|hi[3], Mult:inst5|HI[3]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[2]       ; Stuck at GND              ; Div:inst7|hi[2], Mult:inst5|HI[2]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[1]       ; Stuck at GND              ; Div:inst7|hi[1], Mult:inst5|HI[1]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[0]       ; Stuck at GND              ; Div:inst7|hi[0], Mult:inst5|HI[0]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:LO|Saida[29]      ; Stuck at GND              ; Div:inst7|lo[29], Mult:inst5|LOW[29]                                                ;
+;                               ; due to stuck port clock   ;                                                                                     ;
+; Registrador:HI|Saida[6]       ; Stuck at GND              ; Div:inst7|hi[6], Mult:inst5|HI[6]                                                   ;
+;                               ; due to stuck port clock   ;                                                                                     ;
++-------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -341,7 +610,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1122  ;
+; Number of registers using Clock Enable       ; 1121  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -351,31 +620,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
+; Banco_reg:inst10|Reg9[5]               ; 2       ;
 ; Banco_reg:inst10|Reg11[3]              ; 2       ;
 ; Banco_reg:inst10|Reg11[2]              ; 2       ;
 ; Banco_reg:inst10|Reg10[2]              ; 2       ;
+; Banco_reg:inst10|Reg9[1]               ; 2       ;
 ; Banco_reg:inst10|Reg11[0]              ; 2       ;
 ; Banco_reg:inst10|Reg10[0]              ; 2       ;
-; Total number of inverted registers = 5 ;         ;
+; Total number of inverted registers = 7 ;         ;
 +----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 2 ALUTs              ; 2 ALUTs                ; Yes        ; |bloco_teste1|Controlador:inst|writeReg[0] ;
-; 9:1                ; 2 bits    ; 12 ALUTs      ; 8 ALUTs              ; 4 ALUTs                ; Yes        ; |bloco_teste1|Controlador:inst|estado[0]   ;
-; 1:1                ; 32 bits   ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|WriteDataMux:inst6|Mux30     ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux33            ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 128 ALUTs            ; 32 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux7             ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux20         ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux2          ;
-; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|Controlador:inst|Selector8   ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux30       ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux62       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 1:1                ; 32 bits   ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|WriteDataMux:inst6|Mux29    ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux48           ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 128 ALUTs            ; 32 ALUTs               ; No         ; |bloco_teste1|Ula32:inst1|Mux10           ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux28        ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |bloco_teste1|ULAsrcB:inst12|Mux0         ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |bloco_teste1|Controlador:inst|Selector38 ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux18      ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; No         ; |bloco_teste1|Banco_reg:inst10|Mux53      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -512,7 +781,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Oct 15 19:12:35 2019
+    Info: Processing started: Thu Oct 17 20:35:20 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HW -c HW
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file instr_reg.vhd
@@ -552,6 +821,14 @@ Info: Found 1 design units, including 1 entities, in source file writedatamux.v
     Info: Found entity 1: WriteDataMux
 Info: Found 1 design units, including 1 entities, in source file filter.v
     Info: Found entity 1: Filter
+Info: Found 1 design units, including 1 entities, in source file div_teste.bdf
+    Info: Found entity 1: div_teste
+Info: Found 1 design units, including 1 entities, in source file mult.v
+    Info: Found entity 1: Mult
+Info: Found 1 design units, including 1 entities, in source file div.v
+    Info: Found entity 1: Div
+Info: Found 1 design units, including 1 entities, in source file hilo_mux.v
+    Info: Found entity 1: HILO_Mux
 Info: Elaborating entity "bloco_teste1" for the top level hierarchy
 Info: Elaborating entity "ULAsrcA" for hierarchy "ULAsrcA:inst11"
 Warning (10235): Verilog HDL Always Construct warning at ULAsrcA.v(9): variable "PC" is read inside the Always Construct but isn't in the Always Construct's Event Control
@@ -593,12 +870,12 @@ Info (10041): Inferred latch for "out[30]" at ULAsrcA.v(7)
 Info (10041): Inferred latch for "out[31]" at ULAsrcA.v(7)
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:A"
 Info: Elaborating entity "Controlador" for hierarchy "Controlador:inst"
-Warning (10230): Verilog HDL assignment warning at Controlador.v(97): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at Controlador.v(98): truncated value with size 32 to match size of target (5)
-Warning (10762): Verilog HDL Case Statement warning at Controlador.v(27): can't check case statement for completeness because the case expression has too many possible states
-Warning (10763): Verilog HDL warning at Controlador.v(27): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10036): Verilog HDL or VHDL warning at Controlador.v(23): object "waiting" assigned a value but never read
+Warning (10762): Verilog HDL Case Statement warning at Controlador.v(30): can't check case statement for completeness because the case expression has too many possible states
+Warning (10763): Verilog HDL warning at Controlador.v(30): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
 Warning (10034): Output port "IorD" at Controlador.v(18) has no driver
 Warning (10034): Output port "MemWrite" at Controlador.v(17) has no driver
+Warning (10034): Output port "multStart" at Controlador.v(17) has no driver
 Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:inst3"
 Info: Elaborating entity "Memoria" for hierarchy "Memoria:inst2"
 Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM"
@@ -718,6 +995,14 @@ Info (10041): Inferred latch for "out[1]" at WriteRegMux.v(7)
 Info (10041): Inferred latch for "out[2]" at WriteRegMux.v(7)
 Info (10041): Inferred latch for "out[3]" at WriteRegMux.v(7)
 Info (10041): Inferred latch for "out[4]" at WriteRegMux.v(7)
+Info: Elaborating entity "HILO_Mux" for hierarchy "HILO_Mux:inst9"
+Warning (10235): Verilog HDL Always Construct warning at HILO_Mux.v(10): variable "hidiv" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at HILO_Mux.v(11): variable "lodiv" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at HILO_Mux.v(14): variable "himult" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at HILO_Mux.v(15): variable "lomult" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info: Elaborating entity "Mult" for hierarchy "Mult:inst5"
+Warning (10230): Verilog HDL assignment warning at Mult.v(61): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "Div" for hierarchy "Div:inst7"
 Warning: LATCH primitive "ULAsrcA:inst11|out[31]" is permanently enabled
 Warning: LATCH primitive "ULAsrcA:inst11|out[30]" is permanently enabled
 Warning: LATCH primitive "ULAsrcA:inst11|out[29]" is permanently enabled
@@ -783,11 +1068,6 @@ Warning: LATCH primitive "ULAsrcB:inst12|out[2]" is permanently enabled
 Warning: LATCH primitive "ULAsrcB:inst12|out[1]" is permanently enabled
 Warning: LATCH primitive "ULAsrcB:inst12|out[0]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[31]" is permanently enabled
-Warning: LATCH primitive "WriteRegMux:inst4|out[0]" is permanently enabled
-Warning: LATCH primitive "WriteRegMux:inst4|out[1]" is permanently enabled
-Warning: LATCH primitive "WriteRegMux:inst4|out[2]" is permanently enabled
-Warning: LATCH primitive "WriteRegMux:inst4|out[3]" is permanently enabled
-Warning: LATCH primitive "WriteRegMux:inst4|out[4]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[30]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[29]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[28]" is permanently enabled
@@ -819,6 +1099,11 @@ Warning: LATCH primitive "WriteDataMux:inst6|out[3]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[2]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[1]" is permanently enabled
 Warning: LATCH primitive "WriteDataMux:inst6|out[0]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[4]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[3]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[2]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[1]" is permanently enabled
+Warning: LATCH primitive "WriteRegMux:inst4|out[0]" is permanently enabled
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado[31]" is stuck at GND
     Warning (13410): Pin "estado[30]" is stuck at GND
@@ -849,17 +1134,415 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado[5]" is stuck at GND
     Warning (13410): Pin "estado[4]" is stuck at GND
     Warning (13410): Pin "estado[3]" is stuck at GND
+    Warning (13410): Pin "HIGH[31]" is stuck at GND
+    Warning (13410): Pin "HIGH[30]" is stuck at GND
+    Warning (13410): Pin "HIGH[29]" is stuck at GND
+    Warning (13410): Pin "HIGH[28]" is stuck at GND
+    Warning (13410): Pin "HIGH[27]" is stuck at GND
+    Warning (13410): Pin "HIGH[26]" is stuck at GND
+    Warning (13410): Pin "HIGH[25]" is stuck at GND
+    Warning (13410): Pin "HIGH[24]" is stuck at GND
+    Warning (13410): Pin "HIGH[23]" is stuck at GND
+    Warning (13410): Pin "HIGH[22]" is stuck at GND
+    Warning (13410): Pin "HIGH[21]" is stuck at GND
+    Warning (13410): Pin "HIGH[20]" is stuck at GND
+    Warning (13410): Pin "HIGH[19]" is stuck at GND
+    Warning (13410): Pin "HIGH[18]" is stuck at GND
+    Warning (13410): Pin "HIGH[17]" is stuck at GND
+    Warning (13410): Pin "HIGH[16]" is stuck at GND
+    Warning (13410): Pin "HIGH[15]" is stuck at GND
+    Warning (13410): Pin "HIGH[14]" is stuck at GND
+    Warning (13410): Pin "HIGH[13]" is stuck at GND
+    Warning (13410): Pin "HIGH[12]" is stuck at GND
+    Warning (13410): Pin "HIGH[11]" is stuck at GND
+    Warning (13410): Pin "HIGH[10]" is stuck at GND
+    Warning (13410): Pin "HIGH[9]" is stuck at GND
+    Warning (13410): Pin "HIGH[8]" is stuck at GND
+    Warning (13410): Pin "HIGH[7]" is stuck at GND
+    Warning (13410): Pin "HIGH[6]" is stuck at GND
+    Warning (13410): Pin "HIGH[5]" is stuck at GND
+    Warning (13410): Pin "HIGH[4]" is stuck at GND
+    Warning (13410): Pin "HIGH[3]" is stuck at GND
+    Warning (13410): Pin "HIGH[2]" is stuck at GND
+    Warning (13410): Pin "HIGH[1]" is stuck at GND
+    Warning (13410): Pin "HIGH[0]" is stuck at GND
+    Warning (13410): Pin "LOW[31]" is stuck at GND
+    Warning (13410): Pin "LOW[30]" is stuck at GND
+    Warning (13410): Pin "LOW[29]" is stuck at GND
+    Warning (13410): Pin "LOW[28]" is stuck at GND
+    Warning (13410): Pin "LOW[27]" is stuck at GND
+    Warning (13410): Pin "LOW[26]" is stuck at GND
+    Warning (13410): Pin "LOW[25]" is stuck at GND
+    Warning (13410): Pin "LOW[24]" is stuck at GND
+    Warning (13410): Pin "LOW[23]" is stuck at GND
+    Warning (13410): Pin "LOW[22]" is stuck at GND
+    Warning (13410): Pin "LOW[21]" is stuck at GND
+    Warning (13410): Pin "LOW[20]" is stuck at GND
+    Warning (13410): Pin "LOW[19]" is stuck at GND
+    Warning (13410): Pin "LOW[18]" is stuck at GND
+    Warning (13410): Pin "LOW[17]" is stuck at GND
+    Warning (13410): Pin "LOW[16]" is stuck at GND
+    Warning (13410): Pin "LOW[15]" is stuck at GND
+    Warning (13410): Pin "LOW[14]" is stuck at GND
+    Warning (13410): Pin "LOW[13]" is stuck at GND
+    Warning (13410): Pin "LOW[12]" is stuck at GND
+    Warning (13410): Pin "LOW[11]" is stuck at GND
+    Warning (13410): Pin "LOW[10]" is stuck at GND
+    Warning (13410): Pin "LOW[9]" is stuck at GND
+    Warning (13410): Pin "LOW[8]" is stuck at GND
+    Warning (13410): Pin "LOW[7]" is stuck at GND
+    Warning (13410): Pin "LOW[6]" is stuck at GND
+    Warning (13410): Pin "LOW[5]" is stuck at GND
+    Warning (13410): Pin "LOW[4]" is stuck at GND
+    Warning (13410): Pin "LOW[3]" is stuck at GND
+    Warning (13410): Pin "LOW[2]" is stuck at GND
+    Warning (13410): Pin "LOW[1]" is stuck at GND
+    Warning (13410): Pin "LOW[0]" is stuck at GND
+Info: 333 registers lost all their fanouts during netlist optimizations. The first 333 are displayed below.
+    Info: Register "Div:inst7|lo[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|lo[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Div:inst7|hi[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|LOW[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|HI[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|cont[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[32]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[33]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[34]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[35]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[36]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[37]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[38]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[39]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[40]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[41]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[42]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[43]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[44]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[45]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[46]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[47]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[48]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[49]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[50]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[51]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[52]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[53]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[54]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[55]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[56]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[57]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[58]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[59]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[60]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[61]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[62]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[63]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|negaA[64]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[32]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[33]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[34]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[35]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[36]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[37]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[38]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[39]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[40]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[41]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[42]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[43]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[44]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[45]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[46]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[47]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[48]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[49]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[50]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[51]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[52]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[53]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[54]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[55]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[56]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[57]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[58]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[59]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[60]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[61]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[62]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[63]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|B[64]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[32]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[33]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[34]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[35]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[36]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[37]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[38]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[39]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[40]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[41]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[42]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[43]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[44]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[45]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[46]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[47]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[48]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[49]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[50]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[51]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[52]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[53]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[54]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[55]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[56]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[57]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[58]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[59]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[60]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[61]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[62]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[63]" lost all its fanouts during netlist optimizations.
+    Info: Register "Mult:inst5|A[64]" lost all its fanouts during netlist optimizations.
+    Info: Register "Controlador:inst|divStart" lost all its fanouts during netlist optimizations.
+    Info: Register "Controlador:inst|Load_LO" lost all its fanouts during netlist optimizations.
+    Info: Register "Controlador:inst|Load_HI" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/dcc4/Desktop/hw/HW.map.smsg
-Info: Implemented 2525 device resources after synthesis - the final resource count might be different
+Info: Implemented 2639 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
-    Info: Implemented 336 output pins
-    Info: Implemented 2156 logic cells
+    Info: Implemented 437 output pins
+    Info: Implemented 2169 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 163 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 232 warnings
     Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Tue Oct 15 19:12:48 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Processing ended: Thu Oct 17 20:35:36 2019
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+

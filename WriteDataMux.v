@@ -22,3 +22,5 @@ module WriteDataMux(seletor, ULAOut, LS, HI, LO, SignExtend1to32, SignExtend16to
 	end
 
 endmodule 
+
+

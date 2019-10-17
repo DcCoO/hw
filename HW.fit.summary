@@ -1,4 +1,4 @@
-Fitter Status : Successful - Tue Oct 15 19:13:05 2019
+Fitter Status : Successful - Thu Oct 17 20:35:52 2019
 Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : HW
 Top-level Entity Name : bloco_teste1
@@ -6,10 +6,10 @@ Family : Stratix II
 Device : EP2S30F672C3
 Timing Models : Final
 Logic utilization : 6 %
-    Combinational ALUTs : 984 / 27,104 ( 4 % )
-    Dedicated logic registers : 1,200 / 27,104 ( 4 % )
-Total registers : 1200
-Total pins : 337 / 501 ( 67 % )
+    Combinational ALUTs : 999 / 27,104 ( 4 % )
+    Dedicated logic registers : 1,203 / 27,104 ( 4 % )
+Total registers : 1203
+Total pins : 438 / 501 ( 87 % )
 Total virtual pins : 0
 Total block memory bits : 8,192 / 1,369,728 ( < 1 % )
 DSP block 9-bit elements : 0 / 128 ( 0 % )
